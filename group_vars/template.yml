@@ -72,9 +72,10 @@ kubernetes:
     location: /etc/kubernetes/pki
     # for porxy reserved
     # If the external network accesses the kube-apiserver you can add LB ip on here
-    # extension:
-    #   - *.xiaomo.io
-    #   - 172.16.18.10
+    extension:
+      - 172.16.18.10
+            # - *.xiaomo.io
+            # - 172.16.18.10
 
   # cluster name. defaullt: kubernetes
   name: kubernetes
