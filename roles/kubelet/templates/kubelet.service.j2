@@ -16,7 +16,7 @@ ExecStart=/usr/local/bin/kubelet \
 {% if nodename is defined %}
   --hostname-override={{ nodename | lower }} \
 {% endif %}
-  --pod-infra-container-image={{ kubernetes.kubelet.pod_infra_container_image }} \
+  --pod-infra-container-image=registry.aliyuncs.com/google_containers/pause:3.2 \
   --image-pull-progress-deadline={{ kubernetes.kubelet.image_pull_progress_deadline }} \
   --network-plugin=cni \
   --cni-conf-dir=/etc/cni/net.d \
